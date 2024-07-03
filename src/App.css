@@ -1,38 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
 .App {
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(to right top,  #0073f4,  #b0e4f6);
+  background-size: cover;
+  height: 100vh;
+  color: #ffffff;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+li button {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+                                  /* -----Start Page ------ */
+.start-page-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.start-page-details{
+  max-width: 500px;
+  margin-left: 20px;
+}
+.start-page-section img{
+  width: 250px;
+}
+.start-page-details h1{
+  color: rgb(56, 93, 167);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.start-page-details p{
+  color: #ceecec;
+  font-family: 'Roboto';
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.start-page-details form{
+  text-align: center;
+  margin-top: 20px;
+}
+.start-page-details form input{
+  margin-bottom: 10px;
+  width: 130px;
+  text-align: center;
+  border: none;
+}
+.start-page-details form button{
+  background-color:#18ab29;
+	border-radius:10px;
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:9px 31px;
+	text-decoration:none;
+
+}
+@media screen and (max-width:768px) {
+  .start-page-section{
+    flex-direction: column;
+
+  }
+  .start-page-section img{
+    width: 200px;
+  }
+  .start-page-details{
+    margin-top: 50px;
+    padding: 20px;
+  }
+}
+
+                                             /* ------Home Page-------- */
+.details-card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.details-box{
+  display: flex;
+  justify-content: space-between;
+}
+.tasks-count{
+  font-size: 12px;
+}
+.tasks-count span{
+  color: rgb(65, 128, 14);
+  font-size: 16px;
+  font-weight: bold;
+}
+.task-form button{
+  background-image: linear-gradient(rgb(133, 212, 90), green);
+	border-radius:13px;
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:16px;
+	padding:9px 16px;
+	text-decoration:none;
+}
+.task-form button:hover {
+  background-color:#5cbf2a;
+}
+.task-form button:active {
+	position:relative;
+	top:1px;
+}
+
+                                              /* -----Task Input----- */
+.input{
+  border: none;
+  
+}
+.add-button{
+  color: #ffffff;
+  background-image: linear-gradient(rgb(80, 208, 29), green);
+  border: none;
+  border-radius: 8px;
+}
+.pop-up{
+  color: #c51925d6;
+  font-family: cursive;
+  font-size: 22px;
+  font-weight: 600;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+                                                /* ----Task List---- */
+.task-list-card{
+  padding-top: 10px;
+  background-color: #ffffff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 100vh;
+  color: black;
+}
+.search{
+  text-align: center;
+}
+.search input{
+  height: 25px;
+  width: 200px;
+}
+.search-logo{
+  margin-left: -30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.task-list-card ul{
+  padding-right: 10px;
+}
+.label-container{
+  display: flex;
+  font-family: "Roboto";
+  background-color: #e3f1f6;
+  width: 100%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #096f92;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 4px;
+}
+.checkbox-input {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+
+}
+.checkbox-label{
+  font-size: 16px;
+  font-weight: 400;
+  width: 82%;
+  margin: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+.label-container div{
+  display: flex;
+}
+.button{
+	cursor:pointer;
+  font-size: 30px;
+  margin-top: 8px;
+}
+.edit-button{
+  font-size: 25px;
+}
+
+.delete-button{
+  margin-left: 20px;
+  color: rgb(247, 14, 14);
+}
+.no-tasks-card{
+  text-align: center;
+}
+.no-tasks-card img{
+  width: 300px;
+}
+
+@media screen and (min-width:768px) {
+  .task-list-card ul{
+    margin-left: 150px;
+    margin-right: 150px;
   }
+  .details-box{
+    justify-content: space-around;
+  }
+  .edit-button{
+    margin-left: 100px;
+  }
+  
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+                                          /* -----NOT FOUND------ */
+.not-found{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 100%;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.not-found img{
+  width: 300px;
 }
